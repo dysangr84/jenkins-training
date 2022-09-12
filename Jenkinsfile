@@ -14,7 +14,7 @@ pipeline {
     
     stage("Environment") {
       steps {
-        echo ${params.ENVIRONMENT}
+        echo "${params.ENVIRONMENT}"
       }
     }
     
