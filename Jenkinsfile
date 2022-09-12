@@ -7,11 +7,15 @@ pipeline {
   
   stages {
     stage("Init") {
-      echo 'Init related steps'
+      steps {
+        echo 'Init related steps'
+      }
     }
     
     stage("End") {
-      echo 'The end'
+      steps {
+        echo 'The end'
+      }
     }
   }
 }
