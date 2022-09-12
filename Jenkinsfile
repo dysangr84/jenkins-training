@@ -12,6 +12,21 @@ pipeline {
       }
     }
     
+    stage("Environment") {
+      steps {
+        echo ${params.ENVIRONMENT}
+      }
+    }
+    
+    stage("Automation") {
+      when {
+        expression { params.ENVIRONMENT == 'UAT' }
+      }
+      steps {
+        echo 'UAT selected' 
+      }
+    }
+    
     stage("End") {
       steps {
         echo 'The end'
